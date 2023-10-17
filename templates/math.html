@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+{#enter the functions at the tope of the body#}
+
+{% if get_flashed_messages() %}
+    {% for msg in get_flashed_messages() %}
+        <div style="margin: 50px auto; padding: 25px; width: 85%; boarder: 2px solid #333;">
+            {{ msg }}
+        </div>
+    {% endfor %}
+{% endif %}
+
+    <h1>Math Game</h1>
+    <p>What is {{ num1 }}+{{ num2 }}</p>
+    <form action="/math-game" method="post">
+        <input type="text" name="answer">
+        <input type="hidden" name="correct_answer" value="{{ correct_answer }}">
+        <input type="submit" value="Check Answer!">
+
+    </form>
+</body>
+</html>
