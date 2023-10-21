@@ -1,5 +1,4 @@
 from flask import jsonify, request
-
 from app import app
 # from flask_uploads import UploadSet, configure_uploads, DATA
 from flask_uploads import UploadSet, configure_uploads, DATA, UploadSet
