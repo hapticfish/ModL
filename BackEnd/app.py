@@ -7,3 +7,5 @@ app = Flask(__name__)
 #TODO add functionality to view uploaded file columns and data up to 100 rows
 
 #TODO add logic in modules for showing graphics do some research on how to do this
+
+#TODO use docstrings for all methods/functions example """ CODE """ for FUNCTIONS CLASSES AND MNODULES

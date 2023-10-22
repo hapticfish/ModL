@@ -1,10 +1,11 @@
-from flask import Flask, jsonify, request
+from flask import jsonify, request
 from app import app
-# from flask_uploads import UploadSet, configure_uploads, DATA
-from flask_uploads import UploadSet, configure_uploads, DATA, UploadSet
 import pandas as pd
-import os
-from BackEnd.fileHandling.fileHandler import upload_file
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+import matplotlib.pyplot as plt
+import seaborn as sns
+from BackEnd.file_handling.filehandler import upload_file
 
 
 
