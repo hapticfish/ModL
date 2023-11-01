@@ -1,3 +1,5 @@
+import base64
+
 from flask import jsonify, request
 from sklearn.metrics import mean_squared_error, r2_score
 from sklearn.preprocessing import StandardScaler

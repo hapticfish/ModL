@@ -6,24 +6,24 @@ from BackEnd.analysis.preprocessing import upload_file
 
 
 @app.route('/datasetDisplay', methods=['GET'])
-def displayDataSet():
+def displaydataset():
     df = upload_file()
     json_data = df.to_json(orient='records')
     return json_data
 
 """returns the preliminal exploritory data: df.info, df.describe to the front end"""
 @app.route('/dataExplore', methods= ['GET'])
-def upLoadExploreData():
+def uploadexploredata():
     df = upload_file()
-    dfInfo = df.info()
-    dfDescription = df.describe()
+    df_info = df.info()
+    df_description = df.describe()
 
-    explorerData = {
-        'info': dfInfo,
-        'description': dfDescription
+    explorer_data = {
+        'info': df_info,
+        'description': df_description
     }
 
-    return explorerData
+    return explorer_data
 
 
 
