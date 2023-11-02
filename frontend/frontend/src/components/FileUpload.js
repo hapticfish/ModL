@@ -38,16 +38,23 @@ const FileUpload = () => {
 
     return (
         <div className="file-upload-container">
-            <div className="inpout-clear-group">
-                <input type="file" onChange={onFileChange}/>
-                <button onClick={onClear}>Clear</button>
+            <div className="left-side-panel">
+
+
             </div>
-            <div className="upload-button-group">
-                <button onClick={onUpload}>Upload</button>
+            <div className="right-side-panel">
+                <div className="input-clear-group">
+                    <input className="upload-button" type="file" onChange={onFileChange}/>
+                    <button className="clear-button" onClick={onClear}>Clear</button>
+                </div>
+                <div className="upload-button-group">
+                    <button onClick={onUpload}>Upload</button>
+                </div>
+                <div className="message">
+                    <p>{message}</p>
+                </div>
             </div>
-            <div className="message">
-                <p>{message}</p>
-            </div>
+
 
         </div>
     );
